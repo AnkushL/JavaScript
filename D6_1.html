@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Registration Form </title>
+	<style type="text/css">
+		body{
+			background-color: blueviolet;
+		}
+		.abc{
+			color: aquamarine;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+<div align="center">
+	<h1> Registration Form </h1>
+	<form method="post" action="">
+		<input type="text" placeholder="Enter Your Name" size="25" id="nm">
+		<br><br>
+		<input type="number" placeholder="Enter your age" size="25" id="age" maxlength="3">
+		<br><br>
+		<input type="email" placeholder="Enter your E-mail I'd" size="25" id="mail">
+		<br><br>
+		<input type="button" value="REGISTER" onclick="userDetails()">
+		<br>
+	</form>
+	<div id="data" class="abc"></div>
+	<script type="text/javascript">
+		function userDetails(){
+			var userName = document.getElementById('nm').value;
+			var userAge = document.getElementById('age').value;
+			var userEmail = document.getElementById('mail').value;
+			document.getElementById('data').innerHTML = "<h1><span style= color:'red';> Name: "+userName+"<br> Age: "+userAge+"<br> Email I'd: "+userEmail+"</span></h1>";
+		}
+	</script>
+</div>
+</body>
+</html>
